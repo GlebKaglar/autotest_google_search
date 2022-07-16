@@ -1,5 +1,5 @@
-from environments.selenium_env.autotest_google_search.Pages.base_page import BasePage
-from environments.selenium_env.autotest_google_search.Pages.search_result_page import SearchResultPage
+from ..Pages.base_page import BasePage
+from ..Pages.search_result_page import SearchResultPage
 
 
 def test_calculate(driver):
