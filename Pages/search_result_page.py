@@ -23,9 +23,9 @@ class SearchResultPage(BasePage):  # 1*2-3+1
         num_1.click()
         equals.click()
         memory_string = self.driver.find_element(*SearchResultPageLocators.CALCULATE_MEMORY_STRING).text
-        assert memory_string == '1 × 2 - 3 + 1 =', 'Memory string memory does not match'
-        print('ОР_1 = ФР_1')
+        assert memory_string == '1 × 2 - 3 + 1 =', 'Memory string does not match'
         answer = self.driver.find_element(*SearchResultPageLocators.CALCULATE_RESULT).text
         assert answer == '0', 'Answer is wrong'
-        print('ОР_2 = ФР_2')
+        print('ФР = ОР\nВ строке памяти (строка над результатом) отображается ранее введенная формула «1 * 2- 3 + 1 =»')
+        print('В строке результата отображается «0»')
         time.sleep(3)
